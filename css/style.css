@@ -1,0 +1,166 @@
+/* Default */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 1rem;
+  color: var(--desaturated-blue);
+  font-weight: 500;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  background: none;
+	color: inherit;
+	border: none;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 450px;
+  /* height: 657px; it's not good overall(for the image especially)*/
+  margin: 0 auto;
+}
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+html,
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  background: url('./../images/pattern-background-mobile.svg') center center/cover no-repeat;
+  line-height: 1.6;
+  height: 100vh;
+  padding: 10px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.card {
+  margin-top: 10vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Header Image */
+
+.card__header-image img {
+  /* width: fit-content; */
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+/* Hero Card */
+
+.card__hero {
+  padding: 2rem 5rem 1rem;
+}
+
+.card__hero-title {
+  margin-bottom: 16px;
+}
+
+.card__hero-description {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Hero Plan */
+
+.card__hero-plan {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  border-radius: 10px;
+  padding: 19px;
+  margin-bottom: 20px;
+  width: 280px;
+
+}
+
+.card__hero-plan-payment {
+  margin-right: 25px;
+}
+
+.card__hero-plan h2 {
+  font-size: 16px;
+}
+
+.card__hero-plan a {
+  color: var(--bright-blue);
+  font-weight: 700;
+}
+
+/* Card Footer */
+
+.card__footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.card__footer-btn1 {
+  background-color: var(--bright-blue);
+  color: #fff;
+  padding: 16px 0;
+  width: 80%;
+  border-radius: 13px;
+  box-shadow: 5px 15px 30px rgba(137, 87, 191, 0.4);
+}
+
+.card__footer-btn2 {
+  color: var(--desaturated-blue);
+  margin-bottom: 10px;
+}
+
+@media (min-width: 400px) {
+
+  /* Card Hero */
+  .card__hero-plan {
+    width: 350px;
+  }
+
+
+  /* Card Footer */
+  .card__footer-btn1 {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  html,
+  body {
+    background: url('./../images/pattern-background-desktop.svg') center center/cover no-repeat;
+  }
+}
